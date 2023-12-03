@@ -187,32 +187,30 @@ input[type=text], input[type=date], .btn-submit:focus {
 }
 
 .dark-theme {
-    background-color: #1e1e1e; /* Warna latar belakang untuk tema gelap */
-    color: #ffffff; /* Warna teks untuk tema gelap */
+    background-color: #1e1e1e; 
+    color: #ffffff; 
 }
 
-/* Contoh gaya khusus untuk tema gelap */
 .dark-theme header {
-    background: #2b2b2b; /* Warna latar belakang header untuk tema gelap */
-    color: #f0ebeb; /* Warna teks header untuk tema gelap */
+    background: #2b2b2b; 
+    color: #f0ebeb; 
 }
 
 .dark-theme .container {
-    background: #333; /* Warna latar belakang container untuk tema gelap */
-    color: #ffffff; /* Warna teks container untuk tema gelap */
+    background: #333; 
+    color: #ffffff; 
 }
 
 .dark-theme .container-header {
-    color: #f8f4f4; /* Warna teks untuk judul container dalam tema gelap */
+    color: #f8f4f4; 
 }
 
 .dark-theme .list-item {
-    color: #0e0d0d; /* Warna teks untuk list-item dalam tema gelap */
+    color: #0e0d0d; 
 }
 
 
 .btn-submit {
-    /* ... */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -222,45 +220,44 @@ input[type=text], input[type=date], .btn-submit:focus {
 }
 
   header img {
-    width: 100px; /* Atur ukuran gambar sesuai kebutuhan */
-    height: auto; /* Biarkan tinggi mengikuti lebar secara proporsional */
-    margin-left: 20px; /* Atur jarak antara gambar dan judul */
+    width: 100px; 
+    height: auto; 
+    margin-left: 20px; 
   }
 
   header h1 {
-    font-weight: bold; /* Menjadikan teks tebal */
+    font-weight: bold; 
     display: inline-block;
     vertical-align: middle;
   }
 
   .check-button {
-    background-image: url('todoapps/assets/check-solid.svg'); /* Change this to the path of your checkmark icon */
+    background-image: url('todoapps/assets/check-solid.svg'); 
     width: 30px;
     height: 30px;
-    animation: moveIcon 1s infinite alternate; /* Animation */
+    animation: moveIcon 1s infinite alternate;
   }
 
   .trash-button {
-    background-image: url('todoapps/assets/trash-fill.svg'); /* Change this to the path of your checkmark icon */
+    background-image: url('todoapps/assets/trash-fill.svg'); 
     width: 30px;
     height: 30px;
-    animation: moveIcon 1s infinite alternate; /* Animation */
+    animation: moveIcon 1s infinite alternate; 
   }
 
   .undo-button {
-    background-image: url('todoapps/assets/undo-ouline.svg'); /* Change this to the path of your checkmark icon */
+    background-image: url('todoapps/assets/undo-ouline.svg');
     width: 30px;
     height: 30px;
-    animation: moveIcon 1s infinite alternate; /* Animation */
+    animation: moveIcon 1s infinite alternate; 
   }
   
-  /* CSS Animation */
   @keyframes moveIcon {
     from {
-      transform: translateY(0); /* Start position */
+      transform: translateY(0);
     }
     to {
-      transform: translateY(10px); /* End position */
+      transform: translateY(10px); 
     }
   }
 

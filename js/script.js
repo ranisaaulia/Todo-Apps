@@ -32,8 +32,8 @@ document.addEventListener(RENDER_EVENT, function () {
   });
 
 document.addEventListener(SAVED_EVENT, function() {
-    const message = "Data berhasil disimpan!"; // Pesan yang ingin ditampilkan
-    showToast(message); // Memanggil fungsi showToast() untuk menampilkan pesan
+    const message = "Data berhasil disimpan!"; 
+    showToast(message); 
   });
 
 function addTodo() {
@@ -166,7 +166,7 @@ function saveData() {
     }
   }
   
-function isStorageExist() /* boolean */ {
+function isStorageExist() {
     if (typeof (Storage) === undefined) {
       alert('Browser kamu tidak mendukung local storage');
       return false;
