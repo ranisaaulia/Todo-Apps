@@ -31,8 +31,9 @@ document.addEventListener(RENDER_EVENT, function () {
     }
   });
 
-document.addEventListener(SAVED_EVENT, function () {
-    console.log(localStorage.getItem(STORAGE_KEY));
+document.addEventListener(SAVED_EVENT, function() {
+    const message = "Data berhasil disimpan!"; // Pesan yang ingin ditampilkan
+    showToast(message); // Memanggil fungsi showToast() untuk menampilkan pesan
   });
 
 function addTodo() {
@@ -40,7 +41,7 @@ function addTodo() {
     const timestamp = document.getElementById('date').value;
    
     const generatedID = generateId();
-    const todoObject = generateTodoObject(generatedID, textTodo, timestamp, false);
+    const todoObject = generateTodoObject(generatedID, textTodo, timestamp, false, 'Personal');
     todos.push(todoObject);
    
     document.dispatchEvent(new Event(RENDER_EVENT));
@@ -51,12 +52,13 @@ function generateId() {
     return +new Date();
   }
    
-function generateTodoObject(id, task, timestamp, isCompleted) {
+function generateTodoObject(id, task, timestamp, isCompleted, category) {
     return {
       id,
       task,
       timestamp,
-      isCompleted
+      isCompleted,
+      category
     }
   }
 
@@ -184,6 +186,16 @@ function loadDataFromStorage() {
    
     document.dispatchEvent(new Event(RENDER_EVENT));
   }
+
+function displayStatistics() {
+    const totalTasks = todos.length;
+    const completedTasks = todos.filter(todo => todo.isCompleted).length;
+    const pendingTasks = totalTasks - completedTasks;
+
+    console.log(`Total Tasks: ${totalTasks}`);
+    console.log(`Completed Tasks: ${completedTasks}`);
+    console.log(`Pending Tasks: ${pendingTasks}`);
+}
 
 
   
